@@ -24,7 +24,7 @@ mongoose
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );
 
@@ -81,6 +81,20 @@ app.delete("/api/student/:id", async (req, res) => {
   } catch (error) {
     console.error("Error deleting student:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// ✅ UPDATE student by ID
+app.patch("/api/student/:id", async (req, res) => {
+  try {
+    const updatedStudent = await Student.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json({ success: true, data: updatedStudent });
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
   }
 });
 
