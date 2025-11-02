@@ -1,0 +1,95 @@
+/* 🧊 Main container */
+#form-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 400px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#form-container:hover {
+  transform: translateY(-4px);
+}
+
+/* 🎓 Heading */
+.form-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00d4ff, #6a11cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 📝 Form layout */
+#student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* 🏷️ Labels and inputs */
+.form-group label {
+  font-weight: 500;
+  color: #f0f0f0;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ➕ Button */
+#submit-btn {
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#submit-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px);
+}
+
+#submit-btn:active {
+  transform: scale(0.97);
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  #form-container {
+    margin: 30px 15px;
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}

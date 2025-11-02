@@ -1,0 +1,38 @@
+/* 🌆 Full Page Background */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* 🧱 Main wrapper: Form (left) + List (right) */
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* 🏷️ Title */
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+  background: linear-gradient(90deg, #00d4ff, #6a11cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

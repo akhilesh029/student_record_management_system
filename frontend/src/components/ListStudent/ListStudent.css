@@ -1,0 +1,89 @@
+.student-list {
+    flex: 2;
+    min-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: 75vh;
+    transition: transform 0.3s ease;
+  }
+  
+  .student-list:hover {
+    transform: translateY(-4px);
+  }
+  
+  .student-list h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #6a11cb, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 📋 Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  th {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 🗑️ Delete button */
+  button {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 900px) {
+    .student-list {
+      width: 100%;
+      max-width: 600px;
+    }
+  
+    table {
+      font-size: 0.85rem;
+    }
+  }
+  
